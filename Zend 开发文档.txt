@@ -1,0 +1,9 @@
+1)如何获取 URL 的 controllerName
+------------------------------------------------------------------
+$this->getRequest()->getControllerName()
+获取当前 View 的 ControllerName
+	
+Zend_Controller_Front::getInstance()->getRequest()->getControllerName()
+获取 URL 的 ControllerName
+
+

@@ -1,0 +1,26 @@
+Javascript 和 PHP 保存 Mysql 换行总结
+
+1）Javascript 读取 textarea 中的换行为 "\n"
+
+2) PHP中的换行符为 "\r\n"，因此 mysql 数据库中保存的换行应该也为 "\r\n"
+
+3）因此在保存到 mysql 数据库中时，应用 php 把获取的 "\n" 转化成  "\r\n"，即函数
+    public static function replaceJavascriptNToPHPN($String) {
+        $order = array("\n", "\r"); //换行符
+        return str_replace($order, "\r\n", $String); //将javascript中的换行符\n替换成php中的\r\n
+    }
+
+4) Php 在 Html 页面读取数据库数据时，如果有换行，则需要把 "\r\n" 替换成<br>
+
+5) Javascript 在Html页面显示读取 textarea 数据的换行时，需要把 "\n" 替换成<br>
+
+6) 如果javascript 函数需要处理数据库的数据，并且该数据中有单引号 '。如果 Javascript 的方法也是用单引号 ''来传值，则需要转义符号 \ 将单引号转义
+    public static function dealSingleQuote($String) {
+        return str_replace("'", "\'", $String); //将'表示其真实含义\'
+    }
+
+7) 如果 Javascript 在处理参数值中有 "\n"，则页面会断行，此时javascript会报错。需要用以下函数替换 "\n" 为 "\\n" 来解决问题。
+    public static function javascriptReplaceN($String) {
+        $order = array("\r\n", "\n", "\r"); //换行符
+        return str_replace($order, "\\n", $String); //将换行符替换成\\n
+    }

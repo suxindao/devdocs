@@ -1,0 +1,26 @@
+UserTrace 方法实现
+
+1）每个Controller判断接受 ucString，其中带了所有的信息。如果没有，则自己生成一个，并带入页面中。
+	
+	//记录日志
+        $this->view->usertraceString = Application_Model_WGZString::usertrace();
+
+2）在每个页面中利用Javascript接受ucString，在用户点击a时，添加onClick事件，把ucString带到URL中
+
+3）Javascript 代码统一加到Layout和Index两个layout的文件末尾，做为最后生效。
+
+4）个别a有Onclick的需要特殊处理，例如Index页面的a
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('a[rel*=external]').attr('target', '_blank');
+        $("a[class != 'a_style']").click(function() {
+            $(this).attr("href", $(this).attr("href") + "/ut/" + ucs);
+        });
+        $("a[target = '_blank']").click(function() {
+            window.open($(this).attr("href") + "/ut/" + ucs);
+        });
+    });
+</script>
+
+5）对于Traget="_blank" 的链接，修改为rel="external"，并配合上面Javascript实现打开新页面功能

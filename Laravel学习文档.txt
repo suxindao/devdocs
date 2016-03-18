@@ -1,0 +1,210 @@
+
+====== Laravel 5.2 文档 ======
+
+英文文档
+https://laravel.com/docs/5.2/
+
+中文
+http://laravelacademy.org/laravel-docs-5_2
+
+
+==== 安装默认条件 ========
+
+本文默认你已经有配置完善的 PHP + MySQL 运行环境，懂得 PHP 网站运行的基础知识。跟随本教程走完一遍，你将会得到一个基础的包含登录的简单 blog 系统，并将学会如何使用一些强大的 Laravel 插件和 composer 包（Laravel 插件也是 composer 包）。
+
+软件版本：PHP 5.4+，MySQL 5.1+
+
+============= Composer 安装 ===================
+
+http://pkg.phpcomposer.com/#composer-mirror
+
+1）Windows 系统：请在命令行中执行如下命令：
+
+mkdir C:\bin
+cd C:\bin
+php -r "readfile('http://install.phpcomposer.com/installer');" | php
+echo @php "%~dp0composer.phar" %*>composer.bat
+
+上述命令执行成功之后再将 C:\bin 路径加入 PATH 环境变量即可。最后重新打开一个命令行窗口试一试执行 composer --version 看看是否正确输出版本号，例如：。
+
+Composer version 1.0-dev (72cd6afdfce16f36a9fd786bc1b2f32b851e764f) 2015-12-28 17:35:19
+
+2）修改 composer 的全局配置文件（推荐方式）
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+
+===================== 通过 Laravel 命令 安装 Laravel 项目 =========
+
+1）首先, 通过 Composer 下载 Laravel 安装程序:
+
+	composer global require "laravel/installer=~1.1"
+
+	请确保 ~/.composer/vendor/bin 目录在你的 PATH 中。这样，Laravel 可执行文件才会被系统定位并执行。
+
+2）一但安装后, 你可以使用一个简单的命令 laravel new 来创建一个全新的 Laravel 在你指定的目录中。
+
+	例如，laravel new blog 将创建一个名为 blog 的目录，并在该目录中创建一个全新安装的 Laravel，并且，所有 Laravel 的依赖已被安装。这个方法比通过 Composer 安装更快:
+
+	laravel new blog
+
+
+===================== 通过 Composer 创建项目 =========
+
+3）Create 项目
+	
+	http://laravel-china.org/docs/5.1/installation
+
+	composer create-project laravel/laravel --prefer-dist
+
+
+	例如：
+		https://lvwenhan.com/laravel/432.html
+
+	composer create-project laravel/laravel learnlaravel5 5.0.22
+
+	然后，稍等片刻，当前目录下就会出现一个叫 learnlaravel5 的文件夹。
+
+
+	然后将网站根目录配置为 learnlaravel5/public。
+
+
+
+你也可以通过 Composer 的 create-project 命令来安装 Laravel:
+
+composer create-project laravel/laravel --prefer-dist
+
+
+===================== 数据库操作 =========
+创建数据库：
+	
+	CREATE DATABASE `laravel5` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+1）创建模型在model目录下
+	php artisan make:model model\Article
+
+	如果你想要在生成模型时生成数据库迁移，可以使用--migration或-m选项：
+
+	php artisan make:model model\Article --migration
+	php artisan make:model model\Article -m
+	
+2）创建数据迁移
+	php artisan make:migration create_articles_table
+
+3）执行迁移
+	php artisan migrate
+
+	migrate 命令
+	 migrate:install     Create the migration repository
+	 migrate:refresh     Reset and re-run all migrations
+	 migrate:reset       Rollback all database migrations
+	 migrate:rollback    Rollback the last database migration
+	 migrate:status      Show the status of each migration
+
+4）创建数据填充脚本并填充数据
+
+	3.1 创建数据填充脚本：php artisan make:seeder ArticlesTableSeeder
+
+	在上面添加上 use App\Model\Article;
+	
+	在run方法里面填充：
+        DB::table('articles')->delete();
+
+        for ($i = 0; $i < 10; $i++) {
+            Article::create([
+                'title' => '这是苏新道的数据注入 ' . $i,
+                'body' => '很精彩的内容啊 ' . $i
+            ]);
+        }
+	
+	3.2 执行命令：php artisan db:seed --class=ArticlesTableSeeder
+
+	3.3 或者在 DatabaseSeeder 里面添加命令：$this->call('ArticlesTableSeeder');
+
+5）重建数据库并数据注入：php artisan migrate:refresh --seed
+
+============== 创建 JSON 的URL =========
+1）添加路由
+	在router.php中添加路由：
+	Route::get('/ArticleJson', 'ArticleController@index');
+
+2）创建 Controller	
+
+	创建普通 Controller
+	php artisan make:controller ArticleController
+
+	创建 resource 的 Controller
+	php artisan make:controller --resource ArticleController
+
+3）生成 Json 数据并返回
+
+	在 ArticleController 的index中添加：return Article::paginate();
+	即返回了分页的数据Json格式
+
+=========== 创建 Controller =========
+
+1）执行命令：php artisan make:controller --resource PageController
+
+	--resource 创建带有 resource 支持的controller
+
+2）添加路由支持
+
+	Route::get('/pages', 'PagesController@index');
+
+=========== 创建 View =========
+
+1）View 在 C:\xampp\htdocs\blog\resources\views 目录下，没有 php artisan 命令可以执行，只能手工创建
+
+2）这里我们在 views 目录下创建 page子目录，里面创建 view 文件 page.blade.php (一定要以.blade.php)结尾
+
+3）调用此view的方法：return view('page.page'); （这里目录用.分割）
+
+
+=========== 添加 Auth 认证 =========
+
+1）执行命令：php artisan make:auth，系统会自动添加带Auth的模块
+
+2）更改路由，添加自己的认证控制
+
+    Route::get('/ArticleJson', [
+        'middleware' => 'auth',
+        'uses' => 'ArticleController@index'
+    ]);
+
+3）修改 Controller 的__construct 方法，添加 auth 认证
+
+    public function __construct() {
+//        $this->middleware('auth');
+    }
+
+====== 打印最后执行的 SQL 语句 ==========
+
+DB::connection()->enableQueryLog();
+$queries = DB::getQueryLog();
+var_dump($queries);
+
+
+或者在 AppServiceProvider 监视 执行的SQL
+
+    public function boot() {
+        view()->share('shareInfo', 'This is sheare info!');
+        DB::listen(function($sql) {
+            Log::info('USE SQL:' . json_encode($sql));
+        });
+    }
+
+=========  站点的维护模式 =============
+
+当你的应用处于维护模式时，所有对应用的请求都会返回同一个自定义视图。这一机制在对应用进行升级或者维护时，使得“关闭”站点变得轻而易举。对维护模式的判断代码位于应用默认的中间件栈中，如果应用处于维护模式，则状态码为 503 的 HttpException 将会被抛出。
+要开启维护模式，只需执行 Artisan 命令 down 即可：
+
+php artisan down
+
+要关闭维护模式，对应的 Artisan 命令是 up：
+
+php artisan up
+
+维护模式响应模板
+默认的维护模式响应模板是 resources/views/errors/503.blade.php
+
+
+

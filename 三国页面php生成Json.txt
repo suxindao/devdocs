@@ -1,0 +1,22 @@
+1）我已添加game在第8层，执行的sql语句为：
+insert into wx_survey_question (question_id, question_title, question_order, pre_question_id_array, question_type) values (1075, 'game', 8, '[1070]', 'game');
+update wx_survey_question set question_order = 9,pre_question_id_array='[1075]' where question_id = 1080;
+update wx_survey_question set question_order = 10 where question_id = 1090;
+
+2) 执行php命令
+cd /d/wxshare/public/
+php sgjason.php
+
+3) 目前在页面上显示换行的字符还是"/"，还没有修改
+
+4) 关于UI的显示样式：
+
+//问题答案style显示4种模式：
+
+//box：default模式，win8显示风格的style，数据库中为null
+
+//mix：在box模式上判断，当最后一个时显示双倍空间
+
+//col: 列显示模式，适用于当选项<=4
+
+//small_col: 窄列显示模式，适用于当选项>4

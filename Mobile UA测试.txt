@@ -1,0 +1,17 @@
+【Chrome】
+Mozilla/5.0 (Linux; Android 4.4.4; L55t Build/23.0.1.G.0.87) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Safari/537.36
+
+【Firefox】
+Mozilla/5.0 (Android 4.4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
+
+【QQ 浏览器】
+Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/6.1 Mobile Safari/537.36
+
+【QQ 内置浏览器】
+Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025469 Mobile Safari/533.1 V1_AND_SQ_5.9.1_272_YYB_D QQ/5.9.1.2535 NetType/WIFI WebP/0.3.0 Pixel/1080
+
+【微信内置浏览器】
+Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025469 Mobile Safari/533.1 MicroMessenger/6.2.5.54_re87237d.622 NetType/WIFI Language/zh_CN
+
+如果机器安装QQ浏览器有时会多一次访问
+Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-Manager Mobile Safari/537.36

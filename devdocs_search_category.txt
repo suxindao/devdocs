@@ -1,0 +1,86 @@
+﻿Category文档
+
+一、
+问：获取Category的方法是什么？
+答：有两种方法： 
+1. 在获取jobs列表的url后面，增加一个result_type=3的参数。例如获取jobs列表的url是http://xxx/search/?keyword=aaa&location=bbb
+那么适用http://xxx/search/?keyword=aaa&location=bbb&result_type=3 时，将在返回全部jobs数据时，json体内将额外包含category信息。节点是categories。
+
+2. 单独使用另外的url获取。url是http://domain/result/category/?keyword=aaa&location=bbb&result_type=2 .
+适用这种方法时，返回的json结果和上面一样，但是json体中的pagenavigator和items节点都是null，仅仅categories节点有值。
+
+
+二、
+问：返回的json格式是什么：
+答：cat_id是分类的唯一ID，cat_name是分类的中文名字。cat_amount是指在当前“关键字”、“地点”、Category下的jobs数量。
+{
+    "paginator": null,
+    "items": null,
+    "categories": [
+        {
+            "cat_id": 2,
+            "cat_name": "软件开发",
+            "cat_amount": 4543
+        },
+        {
+            "cat_id": 9,
+            "cat_name": "硬件/通信/半导体",
+            "cat_amount": 357
+        },
+        {
+            "cat_id": 11,
+            "cat_name": "运维/集成/网络/安全",
+            "cat_amount": 187
+        },
+        {
+            "cat_id": 17,
+            "cat_name": "Web前端/网页/交互设计",
+            "cat_amount": 100
+        },
+        {
+            "cat_id": 21,
+            "cat_name": "测试/文档/配置管理",
+            "cat_amount": 83
+        },
+        {
+            "cat_id": 1,
+            "cat_name": "图形/美术/动画",
+            "cat_amount": 78
+        },
+        {
+            "cat_id": 12,
+            "cat_name": "数据库/数据分析",
+            "cat_amount": 71
+        },
+        {
+            "cat_id": 4,
+            "cat_name": "项目/产品经理",
+            "cat_amount": 52
+        },
+        {
+            "cat_id": 14,
+            "cat_name": "客服/技术支持",
+            "cat_amount": 45
+        },
+        {
+            "cat_id": 6,
+            "cat_name": "市场/销售",
+            "cat_amount": 44
+        }
+    ],
+    "input": null
+}
+
+三、 
+问： 当用户点击了一个分类后，我应该使用哪个url，传递哪些参数？
+答： 应该使用搜索工作的url链接，在其尾部增加一个cat_ids=xxx的参数即可。例如，当用户在当前搜索结果下（软件工程师-北京），
+点击了“软件开发”这个分类，那么应该访问url http://domain/result/search/?keyword=软件工程师&location=北京&page=1&cat_ids=9.
+其中cat_ids=9代表cat_id为9的那个分类。
+
+四、
+问： 按照问题三的URL请求之后，得到的结果是什么？
+答： 得到同“问题一中第1种方法”的结果。只不过其中categories的节点中，包含的category的是二级分类，或者三级分类，或者没有分类。
+
+五：
+问：当我使用cat_ids=数字，这种形式的url后，返回结果json中是否一定包含categories子节点？
+答：不一定包含这个子节点，或者这个子节点有可能为null。
