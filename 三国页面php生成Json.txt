@@ -1,22 +1,22 @@
-1£©ÎÒÒÑÌí¼ÓgameÔÚµÚ8²ã£¬Ö´ĞĞµÄsqlÓï¾äÎª£º
+ï»¿1ï¼‰æˆ‘å·²æ·»åŠ gameåœ¨ç¬¬8å±‚ï¼Œæ‰§è¡Œçš„sqlè¯­å¥ä¸ºï¼š
 insert into wx_survey_question (question_id, question_title, question_order, pre_question_id_array, question_type) values (1075, 'game', 8, '[1070]', 'game');
 update wx_survey_question set question_order = 9,pre_question_id_array='[1075]' where question_id = 1080;
 update wx_survey_question set question_order = 10 where question_id = 1090;
 
-2) Ö´ĞĞphpÃüÁî
+2) æ‰§è¡Œphpå‘½ä»¤
 cd /d/wxshare/public/
 php sgjason.php
 
-3) Ä¿Ç°ÔÚÒ³ÃæÉÏÏÔÊ¾»»ĞĞµÄ×Ö·û»¹ÊÇ"/"£¬»¹Ã»ÓĞĞŞ¸Ä
+3) ç›®å‰åœ¨é¡µé¢ä¸Šæ˜¾ç¤ºæ¢è¡Œçš„å­—ç¬¦è¿˜æ˜¯"/"ï¼Œè¿˜æ²¡æœ‰ä¿®æ”¹
 
-4) ¹ØÓÚUIµÄÏÔÊ¾ÑùÊ½£º
+4) å…³äºUIçš„æ˜¾ç¤ºæ ·å¼ï¼š
 
-//ÎÊÌâ´ğ°¸styleÏÔÊ¾4ÖÖÄ£Ê½£º
+//é—®é¢˜ç­”æ¡ˆstyleæ˜¾ç¤º4ç§æ¨¡å¼ï¼š
 
-//box£ºdefaultÄ£Ê½£¬win8ÏÔÊ¾·ç¸ñµÄstyle£¬Êı¾İ¿âÖĞÎªnull
+//boxï¼šdefaultæ¨¡å¼ï¼Œwin8æ˜¾ç¤ºé£æ ¼çš„styleï¼Œæ•°æ®åº“ä¸­ä¸ºnull
 
-//mix£ºÔÚboxÄ£Ê½ÉÏÅĞ¶Ï£¬µ±×îºóÒ»¸öÊ±ÏÔÊ¾Ë«±¶¿Õ¼ä
+//mixï¼šåœ¨boxæ¨¡å¼ä¸Šåˆ¤æ–­ï¼Œå½“æœ€åä¸€ä¸ªæ—¶æ˜¾ç¤ºåŒå€ç©ºé—´
 
-//col: ÁĞÏÔÊ¾Ä£Ê½£¬ÊÊÓÃÓÚµ±Ñ¡Ïî<=4
+//col: åˆ—æ˜¾ç¤ºæ¨¡å¼ï¼Œé€‚ç”¨äºå½“é€‰é¡¹<=4
 
-//small_col: Õ­ÁĞÏÔÊ¾Ä£Ê½£¬ÊÊÓÃÓÚµ±Ñ¡Ïî>4
+//small_col: çª„åˆ—æ˜¾ç¤ºæ¨¡å¼ï¼Œé€‚ç”¨äºå½“é€‰é¡¹>4

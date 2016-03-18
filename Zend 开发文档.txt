@@ -1,9 +1,9 @@
-1)ÈçºÎ»ñÈ¡ URL µÄ controllerName
+ï»¿1)å¦‚ä½•è·å– URL çš„ controllerName
 ------------------------------------------------------------------
 $this->getRequest()->getControllerName()
-»ñÈ¡µ±Ç° View µÄ ControllerName
+è·å–å½“å‰ View çš„ ControllerName
 	
 Zend_Controller_Front::getInstance()->getRequest()->getControllerName()
-»ñÈ¡ URL µÄ ControllerName
+è·å– URL çš„ ControllerName
 
 

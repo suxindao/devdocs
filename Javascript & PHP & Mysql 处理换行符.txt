@@ -1,26 +1,26 @@
-Javascript ºÍ PHP ±£´æ Mysql »»ĞĞ×Ü½á
+ï»¿Javascript å’Œ PHP ä¿å­˜ Mysql æ¢è¡Œæ€»ç»“
 
-1£©Javascript ¶ÁÈ¡ textarea ÖĞµÄ»»ĞĞÎª "\n"
+1ï¼‰Javascript è¯»å– textarea ä¸­çš„æ¢è¡Œä¸º "\n"
 
-2) PHPÖĞµÄ»»ĞĞ·ûÎª "\r\n"£¬Òò´Ë mysql Êı¾İ¿âÖĞ±£´æµÄ»»ĞĞÓ¦¸ÃÒ²Îª "\r\n"
+2) PHPä¸­çš„æ¢è¡Œç¬¦ä¸º "\r\n"ï¼Œå› æ­¤ mysql æ•°æ®åº“ä¸­ä¿å­˜çš„æ¢è¡Œåº”è¯¥ä¹Ÿä¸º "\r\n"
 
-3£©Òò´ËÔÚ±£´æµ½ mysql Êı¾İ¿âÖĞÊ±£¬Ó¦ÓÃ php °Ñ»ñÈ¡µÄ "\n" ×ª»¯³É  "\r\n"£¬¼´º¯Êı
+3ï¼‰å› æ­¤åœ¨ä¿å­˜åˆ° mysql æ•°æ®åº“ä¸­æ—¶ï¼Œåº”ç”¨ php æŠŠè·å–çš„ "\n" è½¬åŒ–æˆ  "\r\n"ï¼Œå³å‡½æ•°
     public static function replaceJavascriptNToPHPN($String) {
-        $order = array("\n", "\r"); //»»ĞĞ·û
-        return str_replace($order, "\r\n", $String); //½«javascriptÖĞµÄ»»ĞĞ·û\nÌæ»»³ÉphpÖĞµÄ\r\n
+        $order = array("\n", "\r"); //æ¢è¡Œç¬¦
+        return str_replace($order, "\r\n", $String); //å°†javascriptä¸­çš„æ¢è¡Œç¬¦\næ›¿æ¢æˆphpä¸­çš„\r\n
     }
 
-4) Php ÔÚ Html Ò³Ãæ¶ÁÈ¡Êı¾İ¿âÊı¾İÊ±£¬Èç¹ûÓĞ»»ĞĞ£¬ÔòĞèÒª°Ñ "\r\n" Ìæ»»³É<br>
+4) Php åœ¨ Html é¡µé¢è¯»å–æ•°æ®åº“æ•°æ®æ—¶ï¼Œå¦‚æœæœ‰æ¢è¡Œï¼Œåˆ™éœ€è¦æŠŠ "\r\n" æ›¿æ¢æˆ<br>
 
-5) Javascript ÔÚHtmlÒ³ÃæÏÔÊ¾¶ÁÈ¡ textarea Êı¾İµÄ»»ĞĞÊ±£¬ĞèÒª°Ñ "\n" Ìæ»»³É<br>
+5) Javascript åœ¨Htmlé¡µé¢æ˜¾ç¤ºè¯»å– textarea æ•°æ®çš„æ¢è¡Œæ—¶ï¼Œéœ€è¦æŠŠ "\n" æ›¿æ¢æˆ<br>
 
-6) Èç¹ûjavascript º¯ÊıĞèÒª´¦ÀíÊı¾İ¿âµÄÊı¾İ£¬²¢ÇÒ¸ÃÊı¾İÖĞÓĞµ¥ÒıºÅ '¡£Èç¹û Javascript µÄ·½·¨Ò²ÊÇÓÃµ¥ÒıºÅ ''À´´«Öµ£¬ÔòĞèÒª×ªÒå·ûºÅ \ ½«µ¥ÒıºÅ×ªÒå
+6) å¦‚æœjavascript å‡½æ•°éœ€è¦å¤„ç†æ•°æ®åº“çš„æ•°æ®ï¼Œå¹¶ä¸”è¯¥æ•°æ®ä¸­æœ‰å•å¼•å· 'ã€‚å¦‚æœ Javascript çš„æ–¹æ³•ä¹Ÿæ˜¯ç”¨å•å¼•å· ''æ¥ä¼ å€¼ï¼Œåˆ™éœ€è¦è½¬ä¹‰ç¬¦å· \ å°†å•å¼•å·è½¬ä¹‰
     public static function dealSingleQuote($String) {
-        return str_replace("'", "\'", $String); //½«'±íÊ¾ÆäÕæÊµº¬Òå\'
+        return str_replace("'", "\'", $String); //å°†'è¡¨ç¤ºå…¶çœŸå®å«ä¹‰\'
     }
 
-7) Èç¹û Javascript ÔÚ´¦Àí²ÎÊıÖµÖĞÓĞ "\n"£¬ÔòÒ³Ãæ»á¶ÏĞĞ£¬´ËÊ±javascript»á±¨´í¡£ĞèÒªÓÃÒÔÏÂº¯ÊıÌæ»» "\n" Îª "\\n" À´½â¾öÎÊÌâ¡£
+7) å¦‚æœ Javascript åœ¨å¤„ç†å‚æ•°å€¼ä¸­æœ‰ "\n"ï¼Œåˆ™é¡µé¢ä¼šæ–­è¡Œï¼Œæ­¤æ—¶javascriptä¼šæŠ¥é”™ã€‚éœ€è¦ç”¨ä»¥ä¸‹å‡½æ•°æ›¿æ¢ "\n" ä¸º "\\n" æ¥è§£å†³é—®é¢˜ã€‚
     public static function javascriptReplaceN($String) {
-        $order = array("\r\n", "\n", "\r"); //»»ĞĞ·û
-        return str_replace($order, "\\n", $String); //½«»»ĞĞ·ûÌæ»»³É\\n
+        $order = array("\r\n", "\n", "\r"); //æ¢è¡Œç¬¦
+        return str_replace($order, "\\n", $String); //å°†æ¢è¡Œç¬¦æ›¿æ¢æˆ\\n
     }

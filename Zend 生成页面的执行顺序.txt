@@ -1,5 +1,5 @@
-1£©ÏÈÖ´ÐÐContrillerµÄaction£¬¸øViewÀïÃæ¸÷²ÎÊý¸³Öµ
+ï»¿1ï¼‰å…ˆæ‰§è¡ŒContrillerçš„actionï¼Œç»™Viewé‡Œé¢å„å‚æ•°èµ‹å€¼
 
-2£©ÔÙÖ´ÐÐLayoutÉú³ÉÒ³Ãæ£¬¿É½ÓÊÕ View µÄ²ÎÊý£¬Éú³ÉÒ³Ãæ
+2ï¼‰å†æ‰§è¡ŒLayoutç”Ÿæˆé¡µé¢ï¼Œå¯æŽ¥æ”¶ View çš„å‚æ•°ï¼Œç”Ÿæˆé¡µé¢
 
-3£©ÔÙÖ´ÐÐÒ³ÃæÀïÃæµÄjavascriptº¯Êý£¬ÈçAjaxµÈÒ³ÃæÉú³É
+3ï¼‰å†æ‰§è¡Œé¡µé¢é‡Œé¢çš„javascriptå‡½æ•°ï¼Œå¦‚Ajaxç­‰é¡µé¢ç”Ÿæˆ

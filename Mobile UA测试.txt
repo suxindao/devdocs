@@ -1,17 +1,17 @@
-¡¾Chrome¡¿
+ï»¿ã€Chromeã€‘
 Mozilla/5.0 (Linux; Android 4.4.4; L55t Build/23.0.1.G.0.87) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Safari/537.36
 
-¡¾Firefox¡¿
+ã€Firefoxã€‘
 Mozilla/5.0 (Android 4.4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 
-¡¾QQ ä¯ÀÀÆ÷¡¿
+ã€QQ æµè§ˆå™¨ã€‘
 Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/6.1 Mobile Safari/537.36
 
-¡¾QQ ÄÚÖÃä¯ÀÀÆ÷¡¿
+ã€QQ å†…ç½®æµè§ˆå™¨ã€‘
 Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025469 Mobile Safari/533.1 V1_AND_SQ_5.9.1_272_YYB_D QQ/5.9.1.2535 NetType/WIFI WebP/0.3.0 Pixel/1080
 
-¡¾Î¢ĞÅÄÚÖÃä¯ÀÀÆ÷¡¿
+ã€å¾®ä¿¡å†…ç½®æµè§ˆå™¨ã€‘
 Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; L55t Build/23.0.1.G.0.87) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025469 Mobile Safari/533.1 MicroMessenger/6.2.5.54_re87237d.622 NetType/WIFI Language/zh_CN
 
-Èç¹û»úÆ÷°²×°QQä¯ÀÀÆ÷ÓĞÊ±»á¶àÒ»´Î·ÃÎÊ
+å¦‚æœæœºå™¨å®‰è£…QQæµè§ˆå™¨æœ‰æ—¶ä¼šå¤šä¸€æ¬¡è®¿é—®
 Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-Manager Mobile Safari/537.36

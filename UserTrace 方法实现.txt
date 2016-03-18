@@ -1,15 +1,15 @@
-UserTrace ·½·¨ÊµÏÖ
+ï»¿UserTrace æ–¹æ³•å®ç°
 
-1£©Ã¿¸öControllerÅĞ¶Ï½ÓÊÜ ucString£¬ÆäÖĞ´øÁËËùÓĞµÄĞÅÏ¢¡£Èç¹ûÃ»ÓĞ£¬Ôò×Ô¼ºÉú³ÉÒ»¸ö£¬²¢´øÈëÒ³ÃæÖĞ¡£
+1ï¼‰æ¯ä¸ªControlleråˆ¤æ–­æ¥å— ucStringï¼Œå…¶ä¸­å¸¦äº†æ‰€æœ‰çš„ä¿¡æ¯ã€‚å¦‚æœæ²¡æœ‰ï¼Œåˆ™è‡ªå·±ç”Ÿæˆä¸€ä¸ªï¼Œå¹¶å¸¦å…¥é¡µé¢ä¸­ã€‚
 	
-	//¼ÇÂ¼ÈÕÖ¾
+	//è®°å½•æ—¥å¿—
         $this->view->usertraceString = Application_Model_WGZString::usertrace();
 
-2£©ÔÚÃ¿¸öÒ³ÃæÖĞÀûÓÃJavascript½ÓÊÜucString£¬ÔÚÓÃ»§µã»÷aÊ±£¬Ìí¼ÓonClickÊÂ¼ş£¬°ÑucString´øµ½URLÖĞ
+2ï¼‰åœ¨æ¯ä¸ªé¡µé¢ä¸­åˆ©ç”¨Javascriptæ¥å—ucStringï¼Œåœ¨ç”¨æˆ·ç‚¹å‡»aæ—¶ï¼Œæ·»åŠ onClickäº‹ä»¶ï¼ŒæŠŠucStringå¸¦åˆ°URLä¸­
 
-3£©Javascript ´úÂëÍ³Ò»¼Óµ½LayoutºÍIndexÁ½¸ölayoutµÄÎÄ¼şÄ©Î²£¬×öÎª×îºóÉúĞ§¡£
+3ï¼‰Javascript ä»£ç ç»Ÿä¸€åŠ åˆ°Layoutå’ŒIndexä¸¤ä¸ªlayoutçš„æ–‡ä»¶æœ«å°¾ï¼Œåšä¸ºæœ€åç”Ÿæ•ˆã€‚
 
-4£©¸ö±ğaÓĞOnclickµÄĞèÒªÌØÊâ´¦Àí£¬ÀıÈçIndexÒ³ÃæµÄa
+4ï¼‰ä¸ªåˆ«aæœ‰Onclickçš„éœ€è¦ç‰¹æ®Šå¤„ç†ï¼Œä¾‹å¦‚Indexé¡µé¢çš„a
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -23,4 +23,4 @@ UserTrace ·½·¨ÊµÏÖ
     });
 </script>
 
-5£©¶ÔÓÚTraget="_blank" µÄÁ´½Ó£¬ĞŞ¸ÄÎªrel="external"£¬²¢ÅäºÏÉÏÃæJavascriptÊµÏÖ´ò¿ªĞÂÒ³Ãæ¹¦ÄÜ
+5ï¼‰å¯¹äºTraget="_blank" çš„é“¾æ¥ï¼Œä¿®æ”¹ä¸ºrel="external"ï¼Œå¹¶é…åˆä¸Šé¢Javascriptå®ç°æ‰“å¼€æ–°é¡µé¢åŠŸèƒ½
