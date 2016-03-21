@@ -1,0 +1,94 @@
+Sass&Compass 安装
+http://www.w3cplus.com/sassguide/install.html
+
+【===== 1.安装 Ruby ====】
+
+1）Windows 安装
+	http://rubyinstaller.org/downloads/
+
+2）Linux 用 homebrew 安装
+
+gem 的升级 
+	gem update sass
+
+【===== 2.安装 SASS ====】
+
+Linux
+	sudo su -c "gem install sass"
+
+Mac
+	 congratulations, Ruby comes pre-installed.
+
+Windows
+	gem install sass
+	sass -v
+	
+【===== 关于 Gem 的升级和 SASS 的升级 ====】
+
+更新GEM的版本，可以输入命令：
+
+	gem update --system
+
+查看已经安装的GEM包，可以输入命令：
+
+	gem list
+
+升级sass版本的命令行为
+
+	gem update sass
+
+升级compass版本的命令行为
+
+	gem update compass
+
+查看sass版本的命令行为
+
+	sass -v
+
+你也可以运行帮助命令行来查看你需要的命令
+
+	sass -h
+
+【淘宝RubyGems镜像安装 sass】
+
+由于国内网络原因（你懂的），导致 rubygems.org 存放在 Amazon S3 上面的资源文件间歇性连接失败。
+
+这时候我们可以通过gem sources命令来配置源：
+
+1）先移除默认的https://rubygems.org源
+2）然后添加淘宝的源https://ruby.taobao.org/
+3）然后查看下当前使用的源是哪个，如果是淘宝的，则表示可以输入sass安装命令gem install sass了
+
+关于常用gem source命令可参看：常用的gem source
+
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://ruby.taobao.org/
+$ gem sources -l
+*** CURRENT SOURCES ***
+
+https://ruby.taobao.org
+
+# 请确保只有 ruby.taobao.org
+$ gem install sass
+
+
+【===== 3.安装 Compass ====】
+http://compass-style.org/install/
+
+Installing Ruby
+
+	Compass runs on any computer that has ruby installed.
+
+Setting up the ruby environment
+
+	$ gem update --system
+	$ gem install compass
+
+Looking for the next release's preview version?
+
+	To install the preview version of Compass:
+	gem install compass --pre
+
+【===== 4.如何更新或卸载SASS/Compass ====】
+	
+	gem uninstall sass
