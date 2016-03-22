@@ -1,17 +1,17 @@
-Sass&Compass °²×°
+ï»¿Sass&Compass å®‰è£…
 http://www.w3cplus.com/sassguide/install.html
 
-¡¾===== 1.°²×° Ruby ====¡¿
+ã€===== 1.å®‰è£… Ruby ====ã€‘
 
-1£©Windows °²×°
+1ï¼‰Windows å®‰è£…
 	http://rubyinstaller.org/downloads/
 
-2£©Linux ÓÃ homebrew °²×°
+2ï¼‰Linux ç”¨ homebrew å®‰è£…
 
-gem µÄÉı¼¶ 
+gem çš„å‡çº§ 
 	gem update sass
 
-¡¾===== 2.°²×° SASS ====¡¿
+ã€===== 2.å®‰è£… SASS ====ã€‘
 
 Linux
 	sudo su -c "gem install sass"
@@ -23,43 +23,43 @@ Windows
 	gem install sass
 	sass -v
 	
-¡¾===== ¹ØÓÚ Gem µÄÉı¼¶ºÍ SASS µÄÉı¼¶ ====¡¿
+ã€===== å…³äº Gem çš„å‡çº§å’Œ SASS çš„å‡çº§ ====ã€‘
 
-¸üĞÂGEMµÄ°æ±¾£¬¿ÉÒÔÊäÈëÃüÁî£º
+æ›´æ–°GEMçš„ç‰ˆæœ¬ï¼Œå¯ä»¥è¾“å…¥å‘½ä»¤ï¼š
 
 	gem update --system
 
-²é¿´ÒÑ¾­°²×°µÄGEM°ü£¬¿ÉÒÔÊäÈëÃüÁî£º
+æŸ¥çœ‹å·²ç»å®‰è£…çš„GEMåŒ…ï¼Œå¯ä»¥è¾“å…¥å‘½ä»¤ï¼š
 
 	gem list
 
-Éı¼¶sass°æ±¾µÄÃüÁîĞĞÎª
+å‡çº§sassç‰ˆæœ¬çš„å‘½ä»¤è¡Œä¸º
 
 	gem update sass
 
-Éı¼¶compass°æ±¾µÄÃüÁîĞĞÎª
+å‡çº§compassç‰ˆæœ¬çš„å‘½ä»¤è¡Œä¸º
 
 	gem update compass
 
-²é¿´sass°æ±¾µÄÃüÁîĞĞÎª
+æŸ¥çœ‹sassç‰ˆæœ¬çš„å‘½ä»¤è¡Œä¸º
 
 	sass -v
 
-ÄãÒ²¿ÉÒÔÔËĞĞ°ïÖúÃüÁîĞĞÀ´²é¿´ÄãĞèÒªµÄÃüÁî
+ä½ ä¹Ÿå¯ä»¥è¿è¡Œå¸®åŠ©å‘½ä»¤è¡Œæ¥æŸ¥çœ‹ä½ éœ€è¦çš„å‘½ä»¤
 
 	sass -h
 
-¡¾ÌÔ±¦RubyGems¾µÏñ°²×° sass¡¿
+ã€æ·˜å®RubyGemsé•œåƒå®‰è£… sassã€‘
 
-ÓÉÓÚ¹úÄÚÍøÂçÔ­Òò£¨Äã¶®µÄ£©£¬µ¼ÖÂ rubygems.org ´æ·ÅÔÚ Amazon S3 ÉÏÃæµÄ×ÊÔ´ÎÄ¼ş¼äĞªĞÔÁ¬½ÓÊ§°Ü¡£
+ç”±äºå›½å†…ç½‘ç»œåŸå› ï¼ˆä½ æ‡‚çš„ï¼‰ï¼Œå¯¼è‡´ rubygems.org å­˜æ”¾åœ¨ Amazon S3 ä¸Šé¢çš„èµ„æºæ–‡ä»¶é—´æ­‡æ€§è¿æ¥å¤±è´¥ã€‚
 
-ÕâÊ±ºòÎÒÃÇ¿ÉÒÔÍ¨¹ıgem sourcesÃüÁîÀ´ÅäÖÃÔ´£º
+è¿™æ—¶å€™æˆ‘ä»¬å¯ä»¥é€šè¿‡gem sourceså‘½ä»¤æ¥é…ç½®æºï¼š
 
-1£©ÏÈÒÆ³ıÄ¬ÈÏµÄhttps://rubygems.orgÔ´
-2£©È»ºóÌí¼ÓÌÔ±¦µÄÔ´https://ruby.taobao.org/
-3£©È»ºó²é¿´ÏÂµ±Ç°Ê¹ÓÃµÄÔ´ÊÇÄÄ¸ö£¬Èç¹ûÊÇÌÔ±¦µÄ£¬Ôò±íÊ¾¿ÉÒÔÊäÈësass°²×°ÃüÁîgem install sassÁË
+1ï¼‰å…ˆç§»é™¤é»˜è®¤çš„https://rubygems.orgæº
+2ï¼‰ç„¶åæ·»åŠ æ·˜å®çš„æºhttps://ruby.taobao.org/
+3ï¼‰ç„¶åæŸ¥çœ‹ä¸‹å½“å‰ä½¿ç”¨çš„æºæ˜¯å“ªä¸ªï¼Œå¦‚æœæ˜¯æ·˜å®çš„ï¼Œåˆ™è¡¨ç¤ºå¯ä»¥è¾“å…¥sasså®‰è£…å‘½ä»¤gem install sassäº†
 
-¹ØÓÚ³£ÓÃgem sourceÃüÁî¿É²Î¿´£º³£ÓÃµÄgem source
+å…³äºå¸¸ç”¨gem sourceå‘½ä»¤å¯å‚çœ‹ï¼šå¸¸ç”¨çš„gem source
 
 $ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
@@ -68,11 +68,11 @@ $ gem sources -l
 
 https://ruby.taobao.org
 
-# ÇëÈ·±£Ö»ÓĞ ruby.taobao.org
+# è¯·ç¡®ä¿åªæœ‰ ruby.taobao.org
 $ gem install sass
 
 
-¡¾===== 3.°²×° Compass ====¡¿
+ã€===== 3.å®‰è£… Compass ====ã€‘
 http://compass-style.org/install/
 
 Installing Ruby
@@ -89,6 +89,6 @@ Looking for the next release's preview version?
 	To install the preview version of Compass:
 	gem install compass --pre
 
-¡¾===== 4.ÈçºÎ¸üĞÂ»òĞ¶ÔØSASS/Compass ====¡¿
+ã€===== 4.å¦‚ä½•æ›´æ–°æˆ–å¸è½½SASS/Compass ====ã€‘
 	
 	gem uninstall sass
