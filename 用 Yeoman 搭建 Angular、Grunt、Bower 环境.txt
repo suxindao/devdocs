@@ -1,19 +1,19 @@
-ÓÃ Yeoman ´î½¨ Angular¡¢Grunt¡¢Bower »·¾³
+ï»¿ç”¨ Yeoman æ­å»º Angularã€Gruntã€Bower ç¯å¢ƒ
 https://www.npmjs.com/package/generator-angular
 
-1£©Ê×ÏÈÒª°²×°SASSºÍCompass£¬¿É²Î¿´¡¶Sass&Compass °²×°.txt¡·
+1ï¼‰é¦–å…ˆè¦å®‰è£…SASSå’ŒCompassï¼Œå¯å‚çœ‹ã€ŠSass&Compass å®‰è£….txtã€‹
 
-2£©°²×° Node.js
+2ï¼‰å®‰è£… Node.js
 
 3) Install yo, grunt-cli, bower, generator-angular and generator-karma:
 	
 	$npm install -g grunt-cli bower yo generator-karma generator-angular
 
-4£©Make a new directory, and cd into it:
+4ï¼‰Make a new directory, and cd into it:
 	
 	$mkdir my-new-project && cd $_
 
-5£©Run yo angular, optionally passing an app name:
+5ï¼‰Run yo angular, optionally passing an app name:
 
 	$yo angular [app-name]
 
@@ -75,7 +75,7 @@ https://www.npmjs.com/package/generator-angular
 	  };
 	});
 
-10£©Filter
+10ï¼‰Filter
 	Generates a filter in app/scripts/filters.
 
 	Example:
@@ -90,7 +90,7 @@ https://www.npmjs.com/package/generator-angular
 	  };
 	});	
 	
-11£©View
+11ï¼‰View
 	Generates an HTML view file in app/views.
 
 	Example:
@@ -101,7 +101,7 @@ https://www.npmjs.com/package/generator-angular
 
 	<p>This is the user view</p>
 
-12£©Service
+12ï¼‰Service
 	Generates an AngularJS service.
 
 	Example:
@@ -116,7 +116,7 @@ https://www.npmjs.com/package/generator-angular
 
 	You can also do yo angular:factory, yo angular:provider, yo angular:value, and yo angular:constant for other types of services.
 
-13£©Decorator
+13ï¼‰Decorator
 	Generates an AngularJS service decorator.
 
 	Example:

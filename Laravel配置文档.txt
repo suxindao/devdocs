@@ -1,0 +1,88 @@
+Apache 的重启
+apache已经自带了，只需如下三个命令就可以了。  开启apache服务 sudo apachectl start  停止apache服务 sudo apachectl stop  重启服务 sudo apachectl restart  查看版本 httpd -v
+
+
+
+Apache 配置
+/etc/apache2/httpd.conf
+
+<Directory />
+    #AllowOverride none
+    #Require all denied
+    Require all granted
+    AllowOverride all
+</Directory>
+
+DocumentRoot "/Library/WebServer/Documents"
+
+
+
+配置虚拟机
+
+打开虚拟机配置文件
+# Virtual hosts
+Include /private/etc/apache2/extra/httpd-vhosts.conf
+
+编辑 httpd-vhosts.conf
+<VirtualHost *:80>
+    DocumentRoot "/Users/suxindao/work/blog/public"
+    ServerName lblog.com
+    ErrorLog "/private/var/log/apache2/lblog.com-error_log"
+    CustomLog "/private/var/log/apache2/lblog.com-access_log" common
+    <Directory />
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        #Order deny,allow
+        #Allow from all
+        Require all granted
+      </Directory>    
+</VirtualHost>
+
+
+
+设置默认文件
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
+
+
+
+配置 /etc/hosts文件
+127.0.0.1   lblog.com
+
+
+
+配置 Apache 模块
+Laravel 框架自带了 public/.htaccess 文件用来从网址中删除 index.php。如果你用的是 Apache 来运行你的 Laravel 应用，请务必启用 Apache 的 mod_rewrite 模块。
+
+LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+
+
+
+
+PHP 配置
+/usr/local/etc/php/7.0/php.ini
+
+PHP7.0 文件路径
+
+/usr/local/Cellar/php70/7.0.4/bin/php
+
+
+
+
+MySQL 5.7.11 密码设置
+
+2016-03-16T05:56:25.038938Z 1 [Note] A temporary password is generated for root@localhost: =mvzKwZQ%7t.
+
+If you lose this password, please consult the section How to Reset the Root Password in the MySQL reference manual.
+
+/usr/local/mysql/bin/mysql -u root -p
+
+登录时需要用随机密码登录，然后通过以下命令修改密码
+SET PASSWORD = PASSWORD('new password');
+
+
+
+
+
+
