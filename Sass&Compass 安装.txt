@@ -1,4 +1,4 @@
-﻿Sass&Compass 安装
+Sass&Compass 安装
 http://www.w3cplus.com/sassguide/install.html
 
 【===== 1.安装 Ruby ====】
@@ -27,7 +27,7 @@ Windows
 
 更新GEM的版本，可以输入命令：
 
-	gem update --system
+	sudo gem update --system
 
 查看已经安装的GEM包，可以输入命令：
 
@@ -81,8 +81,8 @@ Installing Ruby
 
 Setting up the ruby environment
 
-	$ gem update --system
-	$ gem install compass
+	$ sudo gem update --system
+	$ sudo gem install -n /usr/local/bin compass
 
 Looking for the next release's preview version?
 
@@ -92,3 +92,15 @@ Looking for the next release's preview version?
 【===== 4.如何更新或卸载SASS/Compass ====】
 	
 	gem uninstall sass
+
+
+【===== Mac 11.X EI Captian 以后compass安装需要添加参数 ====】
+
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://ruby.taobao.org/
+$ gem sources -l
+
+sudo gem update
+sudo gem install sass
+sudo gem install -n /usr/local/bin compass
+
