@@ -1,0 +1,33 @@
+﻿用 Yeoman 搭建 Angular、Grunt、Bower 环境
+
+========= 在 Yeoman的官网查找Generator gulp插件
+http://yeoman.io/generators/
+
+找到 gulp-Angular 的 github地址
+https://github.com/swiip/generator-gulp-angular#readme
+
+
+1）首先要安装SASS和Compass，可参看《Sass&Compass 安装.txt》
+
+2）安装 Node.js
+
+3) Install required tools yo, gulp and bower:
+	
+	$npm install -g yo gulp bower
+
+4）Install generator-gulp-angular:
+	
+	$npm install -g generator-gulp-angular
+
+5) Create a new directory, and go into:
+
+	$mkdir my-new-project && cd $_
+
+6）Run yo gulp-angular, and select desired technologies:
+
+	$yo gulp-angular
+
+7) Run gulp for building and grunt serve for preview
+
+	$gulp serve
+
