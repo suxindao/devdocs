@@ -1,4 +1,4 @@
-
+﻿
 ====== Laravel 5.2 文档 ======
 
 英文文档
@@ -32,6 +32,31 @@ Composer version 1.0-dev (72cd6afdfce16f36a9fd786bc1b2f32b851e764f) 2015-12-28 1
 2）修改 composer 的全局配置文件（推荐方式）
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
+【Win10 安装 Composer】
+
+下载Composer-steup.exe
+https://getcomposer.org/download/
+
+中间有可能会先设置PATHEXT，添加.BAT。如： PATHEXT=.COM;.EXE;.BAT;
+
+安装后，执行 composer self-update 升级到1.0.0正式版。
+
+【安装 Laravel】
+
+通过 Composer 安装 Laravel 安装器：
+composer global require "laravel/installer"
+
+【创建项目】
+
+cd 到你的目录下，执行命令：laravel new blog
+
+进入blog目录，执行命令：
+composer install
+npm install
+
+【运行项目】
+
+php artisan serve
 
 ===================== 通过 Laravel 命令 安装 Laravel 项目 =========
 
